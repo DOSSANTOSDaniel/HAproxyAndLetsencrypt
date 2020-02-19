@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ###----------------------------------------------------------------------------------------------------###
-#Usage       :  30 19 * * 5 /usr/bin/certbot renew --renew-hook 'bash RenewWithCron.sh'
+#Usage       :  30 19 * * 5 /usr/bin/certbot root renew -q --renew-hook 'bash RenewWithCron.sh'
 #            :  Ce script sera lancé tous les vendredi à 19h:30.
 #            :  L'option renew permet de vérifier s'il reste moins de 30 jour avant l'expiration du certificat,
 #            :  s'il reste moins de 30 jours alors le hook est exécuté, ici le script RenewWithCron.sh
