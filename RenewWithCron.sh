@@ -1,7 +1,9 @@
 #!/bin/bash
 
 ###----------------------------------------------------------------------------------------------------###
-#Usage       :  /usr/bin/certbot renew --renew-hook 'bash RenewWithCron.sh'                                                                                             
+#Usage       :  /usr/bin/certbot renew --renew-hook 'bash RenewWithCron.sh'
+#            :  
+#            :  Consultation des logs: cat /var/log/syslog | grep "HaproxyRenew"
 #Description :  Permet d’automatiser le renouvellement de certificats Let’s Encrypt.                                                                               
 #            :  A exécuter en root avec cron.                                                                                         
 #Authors     :  daniel.massy@gmail.com, pouteau.aurelie14@gmail.com
