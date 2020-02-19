@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ###----------------------------------------------------------------------------------------------------###
-#Usage       :  30 19 * * 5 root /usr/bin/certbot renew --deploy-hook 'bash /opt/certbot/RenewWithCron.sh'| /usr/bin/logger -t HaproxyRenew
+#Usage       :  30 19 * * 5 root /usr/bin/certbot renew --deploy-hook 'bash /opt/certbot/RenewWithCron.sh' | /usr/bin/logger -t HaproxyRenew
 #            :  Ce script sera lancé tous les vendredi à 19h:30.
 #            :  L'option renew permet de vérifier s'il reste moins de 30 jour avant l'expiration du certificat,
 #            :  s'il reste moins de 30 jours alors les certificats serons renouvelés,
