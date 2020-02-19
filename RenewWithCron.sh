@@ -1,10 +1,11 @@
 #!/bin/bash
 
 ###----------------------------------------------------------------------------------------------------###
-#Usage       :  30 19 * * 5 /usr/bin/certbot root renew -q --renew-hook 'bash RenewWithCron.sh'
+#Usage       :  30 19 * * 5 /usr/bin/certbot root renew -q --deploy-hook 'bash RenewWithCron.sh'
 #            :  Ce script sera lancé tous les vendredi à 19h:30.
 #            :  L'option renew permet de vérifier s'il reste moins de 30 jour avant l'expiration du certificat,
-#            :  s'il reste moins de 30 jours alors le hook est exécuté, ici le script RenewWithCron.sh
+#            :  s'il reste moins de 30 jours alors les certificats serons renouvelés,
+#            :  et le hook sera exécuté, ici le script RenewWithCron.sh
 #            :  Consultation des logs: cat /var/log/syslog | grep "HaproxyRenew"
 #            :
 #Description :  Permet d’automatiser le renouvellement de certificats Let’s Encrypt.                                                                               
