@@ -1,4 +1,13 @@
 #!/bin/bash
+
+###----------------------------------------------------------------------------------------------------###
+#Usage       :                                                                                              
+#Description :  Permet d’automatiser le renouvellement de certificats Let’s Encrypt.                                                                               
+#            :  A exécuter en root avec cron.                                                                                         
+#Authors     :  daniel.massy@gmail.com, pouteau.aurelie14@gmail.com
+#            :  yann.ndongui@gmail.com, killian.boulard@gmail.com                                                 
+###----------------------------------------------------------------------------------------------------###
+
 set -e
 
 declare -r FullKeyDomaine="web.tpdaniel.fr.pem"
