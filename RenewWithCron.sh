@@ -20,10 +20,10 @@ set -e
 # Variables
 declare -r FullKeyDomaine="web.tpdaniel.fr.pem"
 declare -r HaproxyCrtDir="/etc/haproxy/certs"
-declare Rep="$(ls -d /etc/letsencrypt/live/*[!README])"
+declare -r Rep="$(ls -d /etc/letsencrypt/live/*[!README])"
 
 # concaténation
-for Dir in "${Rep}"
+for Dir in ${Rep}
 do
   bash -c "cat ${Dir}/privkey.pem ${Dir}/fullchain.pem > ${HaproxyCrtDir}/${FullKeyDomaine}"
   if [ "${?}" == "0" ]
