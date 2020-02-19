@@ -18,11 +18,11 @@ set -e
 
 declare -r FullKeyDomaine="web.tpdaniel.fr.pem"
 declare -r HaproxyCrtDir="/etc/haproxy/certs"
-declare Rep=$(ls -d /etc/letsencrypt/live/*[!README])
+declare Rep="$(ls -d /etc/letsencrypt/live/*[!README])"
 
-for Dir in $Rep
+for Dir in "${Rep}"
 do
-  bash -c "cat $Dir/privkey.pem $Dir/fullchain.pem > ${HaproxyCrtDir}/${FullKeyDomaine}"
+  bash -c "cat ${Dir}/privkey.pem ${Dir}/fullchain.pem > ${HaproxyCrtDir}/${FullKeyDomaine}"
   if [ "${?}" == "0" ]
   then
     /usr/bin/logger -t HaproxyRenew "Mise à jour du fichier ${HaproxyCrtDir}/${FullKeyDomaine} réussi !"
